@@ -1,10 +1,10 @@
 const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
-const { sequelize, Product } = require('./models');
-const { testConnection, syncModels } = require('./db');
+const { testConnection, syncModels } = require('./config/db');
 const app = express();
 const port = 3000;
+const authRoutes = require('./routes/auth');
 const productsRouter = require('./routes/products');
 const categoriesRouter = require('./routes/categories');
 app.use(bodyParser.json());
@@ -13,5 +13,5 @@ syncModels(); // sync models to database
 
 app.use('/products', productsRouter);
 app.use('/categories', categoriesRouter);
-
+app.use('/auth', authRoutes);
 app.listen(port, () => console.log(`app listening on port ${port}!`));

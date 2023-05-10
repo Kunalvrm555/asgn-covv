@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { sequelize, Product } = require('../models');
+const authMiddleware = require('../middleware/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     try {
         const categories = await Product.findAll({
             attributes: [

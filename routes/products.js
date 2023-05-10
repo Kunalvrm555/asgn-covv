@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { Product } = require('../models');
+const authMiddleware = require('../middleware/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     try {
         const { category, page = 1, limit = 5 } = req.query;
         const options = category ? { where: { category } } : {};
