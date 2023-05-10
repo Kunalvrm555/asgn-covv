@@ -1,0 +1,54 @@
+[
+  { "name": "Dell XPS 15", "category": "Laptops", "price": 200000 },
+  { "name": "Apple MacBook Pro 16", "category": "Laptops", "price": 239900 },
+  { "name": "HP Envy x360", "category": "Laptops", "price": 81490 },
+  {
+    "name": "Samsung Galaxy Watch4",
+    "category": "Smartwatches",
+    "price": 25000
+  },
+  {
+    "name": "Apple Watch Series 7",
+    "category": "Smartwatches",
+    "price": 41900
+  },
+  { "name": "Fossil Gen 6", "category": "Smartwatches", "price": 23995 },
+  { "name": "Sony Bravia Smart TV", "category": "Televisions", "price": 75000 },
+  { "name": "LG OLED C1", "category": "Televisions", "price": 249990 },
+  { "name": "Samsung QLED QN90A", "category": "Televisions", "price": 249990 },
+  { "name": "iPhone 13 Pro Max", "category": "Smartphones", "price": 130000 },
+  { "name": "Samsung Galaxy S21+", "category": "Smartphones", "price": 81999 },
+  { "name": "OnePlus 9 Pro", "category": "Smartphones", "price": 64999 },
+  {
+    "name": "Sony WH-1000XM4",
+    "category": "Wireless headphones",
+    "price": 25990
+  },
+  {
+    "name": "Bose QuietComfort 35 II",
+    "category": "Wireless headphones",
+    "price": 20000
+  },
+  {
+    "name": "Jabra Elite 85h",
+    "category": "Wireless headphones",
+    "price": 28999
+  },
+  {
+    "name": "TP-Link Archer C5400X",
+    "category": "Wi-Fi routers",
+    "price": 39999
+  },
+  {
+    "name": "Asus ROG Rapture GT-AX11000",
+    "category": "Wi-Fi routers",
+    "price": 35999
+  },
+  {
+    "name": "Netgear Orbi RBK53S",
+    "category": "Wi-Fi routers",
+    "price": 35999
+  },
+  { "name": "Acer Nitro 5", "category": "Laptops", "price": 70000 },
+  { "name": "Lenovo Yoga 9i", "category": "Laptops", "price": 149990 }
+]
