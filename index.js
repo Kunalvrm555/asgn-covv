@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
-const { Sequelize, Op } = require('sequelize');
+const { Sequelize } = require('sequelize');
 
 const app = express();
 const port = 3000;
@@ -38,16 +38,22 @@ const Product = sequelize.define('Product', {
 
 app.get('/products', async (req, res) => {
   try {
-    const { category } = req.query;
+    const { category, page = 1, limit = 5} = req.query;
     const options = category ? { where: { category } } : {};
+    const offset = (page - 1) * limit;
 
-    const products = await Product.findAll(options);
+    const products = await Product.findAll({
+      ...options,
+      limit,
+      offset,
+    });
     res.json(products);
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
   }
 });
+
 
 app.get('/categories', async (req, res) => {
   try {
