@@ -28,7 +28,7 @@ async function initDB() {
         await models.sequelize.sync({ force: true });
 
         // Insert seed data
-        const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
+        const products = JSON.parse(fs.readFileSync('src/data/products.json', 'utf8'));
         await models.Product.bulkCreate(products);
         console.log('Products inserted successfully!');
         await models.User.create({
