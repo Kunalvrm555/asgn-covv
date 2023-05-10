@@ -39,5 +39,14 @@ app.get('/products', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+app.get('/categories', async (req, res) => {
+    try {
+        const { rows } = await pool.query('SELECT DISTINCT category FROM products');
+        res.send(rows.map(row => row.category));
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server error');
+    }
+});
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));
