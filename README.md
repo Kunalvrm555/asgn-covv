@@ -15,25 +15,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Node.js
-- PostgreSQL
+- Node.js (v16.17.0 or higher)
+- PostgreSQL (v15.2 or higher)
 
 ### Installing
 
-1. Clone the repository and navigate into the project directory:
+#### 1. Clone the repository and navigate into the project directory:
 
 ```
 git clone https://github.com/kunalvrm555/asgn-covv.git
 cd asgn-covv
 ```
 
-2. Install the dependenies
+#### 2. Install the dependenies
 
 ```
 npm i
 ```
 
-3. Create a .env file and set the following environment variables:
+#### 3. Create a .env file (or edit the `.env.example` file) and set the following environment variables:
 
 ```env
 DB_USER=
@@ -46,13 +46,13 @@ ADMIN_NAME=
 ADMIN_EMAIL=
 ```
 
-4. Initialize the database and seed sample data by using the following command:
+#### 4. Initialize the database and seed sample data by using the following command:
 
 ```
-node scripts/initDB.js
+node src/scripts/initDB.js
 ```
 
-5. Start the server by running
+#### 5. Start the server by using the following command:
 
 ```
 npm run start
