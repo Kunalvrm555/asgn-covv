@@ -31,13 +31,10 @@ async function initDB() {
         const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
         await models.Product.bulkCreate(products);
         console.log('Products inserted successfully!');
-
-        const bcrypt = require('bcrypt');
-        const adminPassword = await bcrypt.hash(process.env.ADMIN_PASS, 10);
         await models.User.create({
             name: process.env.ADMIN_NAME,
             email: process.env.ADMIN_EMAIL,
-            password: adminPassword
+            password: process.env.ADMIN_PASS
         });
         console.log(`User created successfully!`);
 
