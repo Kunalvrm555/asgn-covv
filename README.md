@@ -210,6 +210,13 @@ GET /products?category=Smartphones&page=1&limit=10
 Host: localhost:3000
 Authorization: Bearer your_token_here
 ```
+#### Fetch products with name containing a specific string
+
+To fetch products with name containing a specific string, send a **GET** request to the endpoint `products` with the token in the `Authorization` header and the required string in the `search` query param. For example :
+```http
+GET /products?search=Samsung
+Authorization: Bearer your_token_here
+```
 
 ### Fetch categories
 
