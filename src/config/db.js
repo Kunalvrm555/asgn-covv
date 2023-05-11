@@ -20,4 +20,4 @@ const syncModels = async () => {
   console.log('models synchronized with the database');
 };
 
-module.exports = { sequelize, testConnection, syncModels };
+module.exports = { testConnection, syncModels };
